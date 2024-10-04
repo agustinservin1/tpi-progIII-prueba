@@ -30,5 +30,6 @@ namespace tpi_progIII.Controllers
         {
             return Ok(_patientService.GetAll());
         }
+
     }
 }
