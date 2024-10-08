@@ -21,8 +21,6 @@ namespace Infrastructure.Data
             var entity = _context.Patients
                                  .Include(a=>a.Address)
                                  .FirstOrDefault(c => c.Id == id);
-            var patient = _context.Patients.Remove(entity);
-            _context.SaveChanges();
             return entity;
         }
         public IEnumerable<Patient> GetAllPatientWithAddress()

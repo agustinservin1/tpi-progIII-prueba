@@ -1,4 +1,5 @@
-﻿using Domain.Interfaces;
+﻿using Application.Model;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,9 @@ namespace Application.Services
             _repository = repository;
             _addressRepository = addressRepository;
         }
+    public DoctorDto GetDoctorById (int id) {
+            var doctor = _repository.GetByIdIncludeAddress (id);
+            return DoctorDto.CreateDoctorDto(doctor);
     
     }
 }
