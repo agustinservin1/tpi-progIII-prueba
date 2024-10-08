@@ -48,7 +48,7 @@ namespace Infrastructure.Data
 
             var doctorSpeciality = new EnumToStringConverter<Specialty>();
             modelBuilder.Entity<Doctor>()
-                .Property(e => e.Speciality)
+                .Property(e => e.Specialty)
                 .HasConversion(doctorSpeciality);
 
             modelBuilder.Entity<Doctor>()

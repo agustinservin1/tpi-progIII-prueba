@@ -55,22 +55,11 @@ namespace Application.Services
                 Password = patient.Password,
             };
 
-            try
-            {
+           
                 var address = _addresRepository.Create(newAdress);
                 var newEntity = _patientRepository.Create(entity);
                 return PatientDto.CreatePatient(newEntity);
             }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred while creating the patient.", ex);
-            }
-        }
-
-
-
-
-
         public PatientDto UpdatePatient(int id, UpdatePatientRequest patient)
         {
             var entity = _patientRepository.GetById(id);
@@ -87,15 +76,9 @@ namespace Application.Services
 
         public PatientDto DeletePatient(int id)
         {
-            try
-            {
-                var entity = _patientRepository.DeletePatient(id);
-                return PatientDto.CreatePatient(entity);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("An error occurred while creating the patient.", ex);
-            }
+            var entity = _patientRepository.DeletePatient(id);
+            return PatientDto.CreatePatient(entity);
+           
         }
 
     }

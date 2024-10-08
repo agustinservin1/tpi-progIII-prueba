@@ -16,7 +16,7 @@ namespace Infrastructure.Data
         {
             _context = context;
         }
-        public  Patient? GetByIdIncludeAddress(int id)
+        public  Patient? GetByIdIncludeAddress(int id) 
         {
             var entity = _context.Patients
                                  .Include(a=>a.Address)
@@ -34,7 +34,7 @@ namespace Infrastructure.Data
         {
             var entity = _context.Patients
                                     .Include(a => a.Address)
-                                    .FirstOrDefault(a => a.Id == id);
+                                    .FirstOrDefault(p => p.Id == id);
 
             var patient = _context.Patients.Remove(entity);
             _context.SaveChanges();

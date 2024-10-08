@@ -23,7 +23,7 @@ namespace Application.Model
         public string Password { get; set; } = string.Empty;
         public AddressDto Address { get; set; }
         [Required]
-        public Specialty Speciality { get; set; }
+        public Specialty Specialty { get; set; }
         public int LicenseNumber { get; set; }
 
         public static DoctorDto CreateDoctorDto (Doctor doctor)
@@ -35,7 +35,7 @@ namespace Application.Model
                 LastName = doctor.LastName,
                 PhoneNumber = doctor.PhoneNumber,
                 DateOfBirth = doctor.DateOfBirth,
-                Speciality = doctor.Speciality,
+                Specialty = doctor.Specialty,
                 LicenseNumber = doctor.LicenseNumber,
                 Address = AddressDto.CreateAddressDto(doctor.Address),
                 Email = doctor.Email,

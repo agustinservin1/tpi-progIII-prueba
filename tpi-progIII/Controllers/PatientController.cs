@@ -22,7 +22,7 @@ namespace tpi_progIII.Controllers
             return Ok(_service.GetPatientById(id));
         }
 
-        [HttpGet ("/getAll")]
+        [HttpGet ("/Patients")]
         public IActionResult GetPatients()
         {
             return Ok(_service.GetAllPatients());

@@ -24,7 +24,7 @@ namespace Infrastructure.Data
                                  .FirstOrDefault(d => d.Id == id);
             return entity;
         }
-        public IEnumerable<Doctor> GetAllDoctorWithAddress()
+        public IEnumerable<Doctor> GetAllDoctorsWithAddress()
         {
             var list = _context.Doctors
                     .Include(a=>a.Address)  
@@ -33,12 +33,12 @@ namespace Infrastructure.Data
         }
         public Doctor DeleteDoctor (int id)
         {
-            var doctor = _context.Doctors
-                .Include (a=>a.Address)
-                .FirstOrDefault(d => d.Id == id);
-            _context.Doctors.Remove(doctor);   
+            var entity = _context.Doctors
+                        .Include (a=>a.Address)
+                        .FirstOrDefault(d => d.Id == id);
+            var doctors = _context.Doctors.Remove(entity);   
             _context.SaveChanges();
-            return doctor;  
+            return entity;  
         }
     }
 }
