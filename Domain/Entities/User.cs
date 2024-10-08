@@ -13,7 +13,7 @@ namespace Domain.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdUser { get; set; }
+        public int Id { get; set; }
         [MaxLength(50)]
         public string Name { get; set; } = string.Empty;
         [MaxLength(50)]
@@ -31,7 +31,10 @@ namespace Domain.Entities
         public string Password { get; set; } = string.Empty;
         [Required]
         public UserRole UserRole { get; set; }
-        //Relación con Address
-        public Address? Address { get; set; }
+
+        public int AddressId { get; set; }
+        public Address? Address { get; set; }    
+
+       
     }
 }

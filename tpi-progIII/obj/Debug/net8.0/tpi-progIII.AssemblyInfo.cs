@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("tpi-progIII")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6fb1d1a926b42df980cd915e850b6af03178755")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98dfd9a1db6148496b17d8a3113c8dd7c53b450e")]
 [assembly: System.Reflection.AssemblyProductAttribute("tpi-progIII")]
 [assembly: System.Reflection.AssemblyTitleAttribute("tpi-progIII")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

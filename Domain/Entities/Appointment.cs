@@ -13,7 +13,7 @@ namespace Domain.Entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdAppointment { get; set; }
+        public int Id { get; set; }
        
         public DateTime Date { get; set; }
         public TimeSpan Time { get; set; }

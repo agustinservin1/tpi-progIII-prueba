@@ -31,7 +31,7 @@ namespace Infrastructure.Migrations
                 name: "Usuarios",
                 columns: table => new
                 {
-                    IdUser = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
@@ -40,7 +40,7 @@ namespace Infrastructure.Migrations
                     Email = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
                     Password = table.Column<string>(type: "TEXT", maxLength: 20, nullable: false),
                     UserRole = table.Column<string>(type: "TEXT", nullable: false),
-                    AddressId = table.Column<int>(type: "INTEGER", nullable: true),
+                    AddressId = table.Column<int>(type: "INTEGER", nullable: false),
                     Speciality = table.Column<string>(type: "TEXT", nullable: true),
                     LicenseNumber = table.Column<int>(type: "INTEGER", nullable: true),
                     Doctor_IsAvailable = table.Column<bool>(type: "INTEGER", nullable: true),
@@ -49,56 +49,58 @@ namespace Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuarios", x => x.IdUser);
+                    table.PrimaryKey("PK_Usuarios", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Usuarios_Adress_AddressId",
                         column: x => x.AddressId,
                         principalTable: "Adress",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Appoitments",
                 columns: table => new
                 {
-                    IdAppointment = table.Column<int>(type: "INTEGER", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Date = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Time = table.Column<TimeSpan>(type: "TEXT", nullable: false),
                     Office = table.Column<string>(type: "TEXT", nullable: false),
                     Status = table.Column<string>(type: "TEXT", nullable: false),
-                    DoctorIdUser = table.Column<int>(type: "INTEGER", nullable: true),
-                    PatientIdUser = table.Column<int>(type: "INTEGER", nullable: true)
+                    DoctorId = table.Column<int>(type: "INTEGER", nullable: true),
+                    PatientId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Appoitments", x => x.IdAppointment);
+                    table.PrimaryKey("PK_Appoitments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Appoitments_Usuarios_DoctorIdUser",
-                        column: x => x.DoctorIdUser,
+                        name: "FK_Appoitments_Usuarios_DoctorId",
+                        column: x => x.DoctorId,
                         principalTable: "Usuarios",
-                        principalColumn: "IdUser");
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Appoitments_Usuarios_PatientIdUser",
-                        column: x => x.PatientIdUser,
+                        name: "FK_Appoitments_Usuarios_PatientId",
+                        column: x => x.PatientId,
                         principalTable: "Usuarios",
-                        principalColumn: "IdUser");
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Appoitments_DoctorIdUser",
+                name: "IX_Appoitments_DoctorId",
                 table: "Appoitments",
-                column: "DoctorIdUser");
+                column: "DoctorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Appoitments_PatientIdUser",
+                name: "IX_Appoitments_PatientId",
                 table: "Appoitments",
-                column: "PatientIdUser");
+                column: "PatientId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Usuarios_AddressId",
                 table: "Usuarios",
-                column: "AddressId");
+                column: "AddressId",
+                unique: true);
         }
 
         /// <inheritdoc />

@@ -1,4 +1,4 @@
-﻿using Application.DTO;
+﻿using Application.Model;
 using Domain.Entities;
 using Domain.Interfaces;
 using System;
@@ -13,55 +13,44 @@ namespace Application.Services
     public class PatientService
     {
         private readonly IPatientRepository _patientRepository;
-        public PatientService (IPatientRepository patient)
+        private readonly IDoctorRepository _doctorRepository;
+        
+        public PatientService (IPatientRepository patient, IDoctorRepository doctorRepository)
         {
             _patientRepository = patient;
+            _doctorRepository = doctorRepository;
+     
         }
-       public Patient? GetById(int id)
-        {
-            return _patientRepository.GetById(id);
-        }
-        public IEnumerable<Patient> GetAll() { 
-            return _patientRepository.GetAll();
-            }
 
-        public Patient CreatePatient(PatientForRequest patient)
+        public PatientDto? GetPatientById(int id)
         {
-        //    var newAddress = new Address()
+            var patient= _patientRepository.GetByIdIncludeAddress(id);
+            return PatientDto.CreatePatient(patient);
+        }
+
+
+
+
+
+
+        //public appointment createappointment(appointmentcreaterequest appointmentcreaterequest)
+        //{
+        //    var patient = _patientrepository.getbyid(appointmentcreaterequest.patientid);
+        //    var doctor = _doctorrepository.getbyid(appointmentcreaterequest.doctorid);
+        //    var appointment = new appointment
         //    {
-        //        Street = address.Street,
-        //        Province = address.Province,
-        //        City = address.City,
-        //        PostalCode = address.PostalCode,
+        //        patientid = patient.iduser,
+        //        iddoctor = doctor.iduser,
+        //        date = appointmentcreaterequest.appointmentdate
 
         //    };
 
-            var entity = new Patient()
-            {
-                Name = patient.Name,
-                LastName = patient.LastName,
-                PhoneNumber = patient.PhoneNumber,
-                DateOfBirth = patient.DateOfBirth,
-            };
+        //    _appointmentrepository.create(appointment);
+        //    return appointment;
+        //}
 
-            return _patientRepository.Create(entity);
-         }
-
-        public Patient UpdatePatient(PatientForRequest patient, int id)
-        {
-            var entity = _patientRepository.GetById(id);
-            if (entity == null){
-                throw new ArgumentException("No se encontró paciente");
-             }
-
-            entity.Name = patient.Name;
-            entity.LastName = patient.LastName;
-            entity.PhoneNumber = patient.PhoneNumber;
-            entity.DateOfBirth = patient.DateOfBirth;
-            
-
-
-            return entity;
-        }
     }
-}
+      
+
+    }
+

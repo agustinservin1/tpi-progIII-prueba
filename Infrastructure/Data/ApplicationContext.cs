@@ -46,7 +46,7 @@ namespace Infrastructure.Data
                 .Property(e => e.Status)
                 .HasConversion(appointmetStatusConverter);
 
-            var doctorSpeciality = new EnumToStringConverter<Speciality>();
+            var doctorSpeciality = new EnumToStringConverter<Specialty>();
             modelBuilder.Entity<Doctor>()
                 .Property(e => e.Speciality)
                 .HasConversion(doctorSpeciality);
@@ -59,9 +59,11 @@ namespace Infrastructure.Data
                 .HasMany(d => d.Appoitments)
                 .WithOne(t => t.Patient);
 
-            modelBuilder.Entity<User>()
-                .HasOne(d => d.Address)
-                .WithMany();
+            modelBuilder.Entity<Address>()
+                .HasOne(d => d.User)
+                .WithOne(a => a.Address)
+                .HasForeignKey<User>(a => a.AddressId);
+
 
         }
 

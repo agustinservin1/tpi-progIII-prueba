@@ -9,6 +9,8 @@ namespace Domain.Interfaces
 {
     public interface IPatientRepository : IBaseRepository<Patient>
     {
-
+        Patient? GetByIdIncludeAddress(int id);
+        IEnumerable<Patient> GetAllPatientWithAddress();
+        Patient DeletePatient(int id);
     }
 }

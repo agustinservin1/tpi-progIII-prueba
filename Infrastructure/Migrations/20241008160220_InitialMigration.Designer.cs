@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20241004203217_InitialMigration")]
+    [Migration("20241008160220_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -49,21 +49,21 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Appointment", b =>
                 {
-                    b.Property<int>("IdAppointment")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("DoctorIdUser")
+                    b.Property<int?>("DoctorId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Office")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("PatientIdUser")
+                    b.Property<int?>("PatientId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Status")
@@ -73,22 +73,22 @@ namespace Infrastructure.Migrations
                     b.Property<TimeSpan>("Time")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("IdAppointment");
+                    b.HasKey("Id");
 
-                    b.HasIndex("DoctorIdUser");
+                    b.HasIndex("DoctorId");
 
-                    b.HasIndex("PatientIdUser");
+                    b.HasIndex("PatientId");
 
                     b.ToTable("Appoitments");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
-                    b.Property<int>("IdUser")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("AddressId")
+                    b.Property<int>("AddressId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DateOfBirth")
@@ -122,9 +122,10 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("IdUser");
+                    b.HasKey("Id");
 
-                    b.HasIndex("AddressId");
+                    b.HasIndex("AddressId")
+                        .IsUnique();
 
                     b.ToTable("Usuarios", (string)null);
 
@@ -184,11 +185,11 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Domain.Entities.Doctor", "Doctor")
                         .WithMany("AssignedAppointment")
-                        .HasForeignKey("DoctorIdUser");
+                        .HasForeignKey("DoctorId");
 
                     b.HasOne("Domain.Entities.Patient", "Patient")
                         .WithMany("Appoitments")
-                        .HasForeignKey("PatientIdUser");
+                        .HasForeignKey("PatientId");
 
                     b.Navigation("Doctor");
 
@@ -198,10 +199,17 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.HasOne("Domain.Entities.Address", "Address")
-                        .WithMany()
-                        .HasForeignKey("AddressId");
+                        .WithOne("User")
+                        .HasForeignKey("Domain.Entities.User", "AddressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Address");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Address", b =>
+                {
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Entities.Doctor", b =>

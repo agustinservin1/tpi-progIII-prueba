@@ -16,6 +16,37 @@ namespace Infrastructure.Data
         {
             _context = context;
         }
+        public  Patient? GetByIdIncludeAddress(int id)
+        {
+            var entity = _context.Patients
+                                 .Include(a=>a.Address)
+                                 .FirstOrDefault(c => c.Id == id);
+            var patient = _context.Patients.Remove(entity);
+            _context.SaveChanges();
+            return entity;
+        }
+        public IEnumerable<Patient> GetAllPatientWithAddress()
+        {
+            var list = _context.Patients
+                              .Include(a => a.Address)
+                              .ToList();
+            return list;
+        }
+        public Patient DeletePatient(int id)
+        {
+            var entity = _context.Patients
+                                    .Include(a => a.Address)
+                                    .FirstOrDefault(a => a.Id == id);
+
+            var patient = _context.Patients.Remove(entity);
+            _context.SaveChanges();
+            return entity;
+        }
+
+
+
+
+
     }
 }
 

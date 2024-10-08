@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
-    public interface IAppointmentRepository : IBaseRepository<Appointment>
+    public interface IAddressRepository : IBaseRepository<Address>
     {
-
     }
 }

@@ -3010,9 +3010,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\tpi-progIII.csproj",
-      "projectName": "tpi-progIII",
-      "projectPath": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\tpi-progIII.csproj",
+      "projectUniqueName": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Web.csproj",
+      "projectName": "Web",
+      "projectPath": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Web.csproj",
       "packagesPath": "C:\\Users\\INTEL RTX\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\obj\\",
       "projectStyle": "PackageReference",

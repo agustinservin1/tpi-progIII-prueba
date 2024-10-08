@@ -11,7 +11,7 @@ namespace Domain.Entities
     public class Doctor : User
     {
         [Required]
-        public Speciality Speciality { get; set; }
+        public Specialty Speciality { get; set; }
         public int LicenseNumber { get; set; }
         public bool IsAvailable { get; set; }
         public ICollection<Appointment> AssignedAppointment { get; set; } = new List<Appointment>();

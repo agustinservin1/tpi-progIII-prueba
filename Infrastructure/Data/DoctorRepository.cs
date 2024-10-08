@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Data
 {
-    public class DoctorRepository : BaseRepository<Doctor>, IDoctorRepostiroy
+    public class DoctorRepository : BaseRepository<Doctor>, IDoctorRepository
     {
         private readonly ApplicationContext _context;
 

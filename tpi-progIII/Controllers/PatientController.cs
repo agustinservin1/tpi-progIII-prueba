@@ -1,4 +1,4 @@
-﻿using Application.DTO;
+﻿using Application.Model;
 using Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,22 +14,13 @@ namespace tpi_progIII.Controllers
         {
             _patientService = patientService;
         }
-
-        [HttpGet ("/{id}")]
-        public IActionResult GetById(int id)
-        {
-           return Ok(_patientService.GetById(id));
-        }
-        [HttpPost]
-        public IActionResult AgregarPaciente([FromBody] PatientForRequest request)
-        {
-            return Ok(_patientService.CreatePatient(request));
-        }
-        [HttpGet ("/GetAll")]
-        public IActionResult GetAll()
-        {
-            return Ok(_patientService.GetAll());
-        }
+           
+        //[HttpPost]
+        //public IActionResult CreateAppointment([FromBody] AppointmentCreateRequest appointment)
+        //{
+        //    return (Ok(_patientService.CreateAppointment(appointment)));
+                
+        // }
 
     }
 }

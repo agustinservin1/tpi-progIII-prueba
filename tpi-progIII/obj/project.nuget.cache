@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "unLrW1Eymu0=",
+  "dgSpecHash": "UUaPxU8UJO0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\tpi-progIII.csproj",
+  "projectFilePath": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\INTEL RTX\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\INTEL RTX\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

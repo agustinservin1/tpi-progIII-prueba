@@ -14,7 +14,7 @@ namespace Infrastructure.Data
         {
             _context = context;
         }
-        public T? GetById<TId>(TId id)
+        public T? GetById<TId>(TId  id)
         {
             return _context.Set<T>().Find(new object[] { id });
         }
