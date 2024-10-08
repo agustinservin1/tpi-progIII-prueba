@@ -33,13 +33,13 @@ namespace tpi_progIII.Controllers
             return Ok(_service.CreateDoctor(request));
         }
 
-        [HttpPut("/{id}")]
+        [HttpPut("/UpdateDoctor/{id}")]
         public IActionResult UpdateDoctor(int id, [FromBody] UpdateDoctorRequest request)
         {
             return Ok(_service.UpdateDoctor(id, request));
         }
 
-        [HttpDelete("/{id}")]
+        [HttpDelete("/DeleteDoctor/{id}")]
 
         public IActionResult DeleteDoctor(int id)
         {

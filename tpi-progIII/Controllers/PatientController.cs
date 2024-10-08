@@ -34,13 +34,13 @@ namespace tpi_progIII.Controllers
             return Ok(_service.CreatePatient(request));
         }
 
-        [HttpPut("/{id}")]
+        [HttpPut("/UpdatePatient/{id}")]
         public IActionResult UpdatePatient(int id, [FromBody] UpdatePatientRequest request)
         {
             return Ok(_service.UpdatePatient(id, request));
         }
 
-        [HttpDelete("/{id}")]
+        [HttpDelete("/DeletePatient/{id}")]
 
         public IActionResult DeletePatient(int id)
         {
