@@ -15,6 +15,10 @@ namespace Domain.Entities
         public int LicenseNumber { get; set; }
         public bool IsAvailable { get; set; }
         public ICollection<Appointment> AssignedAppointment { get; set; } = new List<Appointment>();
+        public Doctor()
+        {
+            IsAvailable = true;
+        }
 
     }
 }

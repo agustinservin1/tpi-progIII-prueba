@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Model
+namespace Application.Model.Request
 {
     public class PatientCreateRequest
     {

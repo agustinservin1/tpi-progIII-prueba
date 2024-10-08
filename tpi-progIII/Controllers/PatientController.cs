@@ -1,4 +1,4 @@
-﻿using Application.Model;
+﻿using Application.Model.Request;
 using Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +22,7 @@ namespace tpi_progIII.Controllers
             return Ok(_service.GetPatientById(id));
         }
 
-        [HttpGet]
+        [HttpGet ("/getAll")]
         public IActionResult GetPatients()
         {
             return Ok(_service.GetAllPatients());
