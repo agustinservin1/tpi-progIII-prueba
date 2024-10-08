@@ -1,4 +1,5 @@
-﻿using Application.Model;
+﻿using Application.Interfaces;
+using Application.Model;
 using Application.Model.Request;
 using Domain.Entities;
 using Domain.Interfaces;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public class DoctorService
+    public class DoctorService : IDoctorService
     {
         private readonly IDoctorRepository _repository;
         private readonly IAddressRepository _addressRepository;
@@ -72,12 +73,12 @@ namespace Application.Services
             }
             
             
-            public DoctorDto DeleteDoctor(int id)
-            {                
+        public DoctorDto DeleteDoctor(int id)
+        {                
                 var entity = _repository.DeleteDoctor(id);
                 return DoctorDto.CreateDoctorDto(entity);
 
-            }
+        }
 
         }
     }

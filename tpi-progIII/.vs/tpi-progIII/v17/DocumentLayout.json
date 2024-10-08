@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{89BF73EE-E0EF-4C91-9591-50A744427E6B}|Web.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\tpi-progiii\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89BF73EE-E0EF-4C91-9591-50A744427E6B}|Web.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C16B12AF-3978-4B22-B5B9-BE692601E6F5}|..\\Application\\Application.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\application\\interfaces\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C16B12AF-3978-4B22-B5B9-BE692601E6F5}|..\\Application\\Application.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\application\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C16B12AF-3978-4B22-B5B9-BE692601E6F5}|..\\Application\\Application.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\application\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C16B12AF-3978-4B22-B5B9-BE692601E6F5}|..\\Application\\Application.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\application\\interfaces\\idoctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{89BF73EE-E0EF-4C91-9591-50A744427E6B}|Web.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\tpi-progiii\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89BF73EE-E0EF-4C91-9591-50A744427E6B}|Web.csproj|solutionrelative:controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,23 +34,13 @@
       "RelativeMoniker": "D:0:0:{89BF73EE-E0EF-4C91-9591-50A744427E6B}|Web.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89BF73EE-E0EF-4C91-9591-50A744427E6B}|Web.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\tpi-progiii\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89BF73EE-E0EF-4C91-9591-50A744427E6B}|Web.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C16B12AF-3978-4B22-B5B9-BE692601E6F5}|..\\Application\\Application.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\application\\model\\doctordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC71D54B-0098-4DF7-A3F3-BEB004655F94}|..\\Domain\\Domain.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\domain\\entities\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C16B12AF-3978-4B22-B5B9-BE692601E6F5}|..\\Application\\Application.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\application\\services\\doctorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C16B12AF-3978-4B22-B5B9-BE692601E6F5}|..\\Application\\Application.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\application\\model\\request\\updatedoctorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C16B12AF-3978-4B22-B5B9-BE692601E6F5}|..\\Application\\Application.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\application\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C16B12AF-3978-4B22-B5B9-BE692601E6F5}|..\\Application\\Application.csproj|c:\\users\\intel rtx\\desktop\\progiii-tpi\\repo-prueba-tpi\\tpi-api-progiii\\tpi-progiii-prueba\\application\\model\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -86,11 +92,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPatientService.cs",
+              "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Interfaces\\IPatientService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IPatientService.cs",
+              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Interfaces\\IPatientService.cs",
+              "RelativeToolTip": "..\\Application\\Interfaces\\IPatientService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAmwBAAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T20:46:21.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IDoctorService.cs",
+              "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Interfaces\\IDoctorService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IDoctorService.cs",
+              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Interfaces\\IDoctorService.cs",
+              "RelativeToolTip": "..\\Application\\Interfaces\\IDoctorService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAmwBAAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T20:45:53.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T20:30:28.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Services\\PatientService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\PatientService.cs",
+              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Services\\PatientService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\PatientService.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAADwv00AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T19:25:43.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "DoctorService.cs",
+              "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Services\\DoctorService.cs",
+              "RelativeDocumentMoniker": "..\\Application\\Services\\DoctorService.cs",
+              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Services\\DoctorService.cs",
+              "RelativeToolTip": "..\\Application\\Services\\DoctorService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAqwFAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T19:26:24.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -102,26 +173,17 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T20:30:28.264Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "DoctorController.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Controllers\\DoctorController.cs",
               "RelativeDocumentMoniker": "Controllers\\DoctorController.cs",
-              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Controllers\\DoctorController.cs*",
-              "RelativeToolTip": "Controllers\\DoctorController.cs*",
+              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "Controllers\\DoctorController.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAuwCkAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T19:17:03.495Z",
@@ -129,37 +191,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DoctorService.cs",
-              "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Services\\DoctorService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\DoctorService.cs",
-              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Services\\DoctorService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\DoctorService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:26:24.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "PatientController.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Controllers\\PatientController.cs",
               "RelativeDocumentMoniker": "Controllers\\PatientController.cs",
-              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Controllers\\PatientController.cs*",
-              "RelativeToolTip": "Controllers\\PatientController.cs*",
+              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\tpi-progIII\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "Controllers\\PatientController.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAA9wCoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T19:17:56.74Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "DoctorRepository.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Infrastructure\\Data\\DoctorRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\DoctorRepository.cs",
@@ -172,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "DoctorDto.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Model\\DoctorDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\Model\\DoctorDto.cs",
@@ -185,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Doctor.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Domain\\Entities\\Doctor.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Doctor.cs",
@@ -198,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "UpdateDoctorRequest.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Model\\Request\\UpdateDoctorRequest.cs",
               "RelativeDocumentMoniker": "..\\Application\\Model\\Request\\UpdateDoctorRequest.cs",
@@ -210,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "20241008202223_FixEntitieAddress.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Infrastructure\\Migrations\\20241008202223_FixEntitieAddress.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Migrations\\20241008202223_FixEntitieAddress.cs",
@@ -222,19 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PatientService.cs",
-              "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Services\\PatientService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Services\\PatientService.cs",
-              "ToolTip": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Services\\PatientService.cs",
-              "RelativeToolTip": "..\\Application\\Services\\PatientService.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAADwv1QAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:25:43.903Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "PatientDto.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Model\\PatientDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\Model\\PatientDto.cs",
@@ -246,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "DoctorCreateRequest.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Model\\Request\\DoctorCreateRequest.cs",
               "RelativeDocumentMoniker": "..\\Application\\Model\\Request\\DoctorCreateRequest.cs",
@@ -258,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ApplicationContext.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Infrastructure\\Data\\ApplicationContext.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\ApplicationContext.cs",
@@ -270,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "PatientRepository.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Infrastructure\\Data\\PatientRepository.cs",
               "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\PatientRepository.cs",
@@ -282,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "IDoctorRepository.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Domain\\Interfaces\\IDoctorRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IDoctorRepository.cs",
@@ -294,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "IPatientRepository.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Domain\\Interfaces\\IPatientRepository.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IPatientRepository.cs",
@@ -306,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Address.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Domain\\Entities\\Address.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\Address.cs",
@@ -318,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "AddressDto.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Model\\AddressDto.cs",
               "RelativeDocumentMoniker": "..\\Application\\Model\\AddressDto.cs",
@@ -330,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "UpdatePatientRequest.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Model\\Request\\UpdatePatientRequest.cs",
               "RelativeDocumentMoniker": "..\\Application\\Model\\Request\\UpdatePatientRequest.cs",
@@ -342,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "PatientCreateRequest.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Model\\Request\\PatientCreateRequest.cs",
               "RelativeDocumentMoniker": "..\\Application\\Model\\Request\\PatientCreateRequest.cs",
@@ -354,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "AppointmentDetailRequest.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Model\\Request\\AppointmentDetailRequest.cs",
               "RelativeDocumentMoniker": "..\\Application\\Model\\Request\\AppointmentDetailRequest.cs",
@@ -366,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "AddressForRequest.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Application\\Model\\Request\\AddressForRequest.cs",
               "RelativeDocumentMoniker": "..\\Application\\Model\\Request\\AddressForRequest.cs",
@@ -378,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\INTEL RTX\\Desktop\\PROGIII-TPI\\REPO-PRUEBA-TPI\\TPI-API-PROGIII\\tpi-progIII-prueba\\Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "..\\Domain\\Entities\\User.cs",
