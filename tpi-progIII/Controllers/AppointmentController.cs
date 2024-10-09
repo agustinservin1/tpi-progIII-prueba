@@ -22,9 +22,19 @@ namespace tpi_progIII.Controllers
             return Ok(_appointmentService.GetById(id));
         }
         [HttpPost("/CreateAppointment")]
-        public IActionResult CreateAppointment(AppointmentCreateRequest request)
+        public IActionResult CreateAppointment([FromBody]AppointmentCreateRequest request)
         {
             return Ok(_appointmentService.CreateAppointment(request));
+        }
+        [HttpPut ("/AppointmentPut")]
+        public IActionResult UpdateAppointment(int id, [FromBody]AppointmentUpdateRequest request)
+        {
+            return Ok(_appointmentService.UpdateAppointment(id, request));
+        }
+        [HttpDelete ("/AppointmentDelete")]
+        public IActionResult DeleteAppointment(int id)
+        {   
+            return Ok(_appointmentService.DeleteAppointment(id));
         }
     }
 }
