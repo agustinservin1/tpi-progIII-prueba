@@ -1,4 +1,5 @@
-﻿using Application.Model.Request;
+﻿using Application.Interfaces;
+using Application.Model.Request;
 using Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,9 +10,9 @@ namespace tpi_progIII.Controllers
     [ApiController]
     public class PatientController : ControllerBase
     {
-        private readonly PatientService _service;
+        private readonly IPatientService _service;
 
-        public PatientController(PatientService service)
+        public PatientController(IPatientService service)
         {
             _service = service;
         }
