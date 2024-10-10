@@ -18,6 +18,9 @@ namespace Application.Model.Request
         
         public string Password { get; set; } = string.Empty;
         public AddressForRequest Address { get; set; } = new AddressForRequest();
+        
+        [Required]
+        [EnumDataType(typeof(Specialty))]
         public Specialty Specialty { get; set; }
         public int LicenseNumber { get; set; }
     }

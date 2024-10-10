@@ -53,14 +53,14 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("DoctorId")
+                    b.Property<int>("DoctorId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Office")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("PatientId")
+                    b.Property<int>("PatientId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Status")
@@ -76,7 +76,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Appoitments");
+                    b.ToTable("Appointments");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
@@ -182,11 +182,15 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Domain.Entities.Doctor", "Doctor")
                         .WithMany("AssignedAppointment")
-                        .HasForeignKey("DoctorId");
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.Entities.Patient", "Patient")
                         .WithMany("Appoitments")
-                        .HasForeignKey("PatientId");
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Doctor");
 

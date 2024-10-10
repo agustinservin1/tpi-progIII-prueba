@@ -3,6 +3,7 @@ using Application.Model.Request;
 using Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace tpi_progIII.Controllers
 {
@@ -35,6 +36,22 @@ namespace tpi_progIII.Controllers
         public IActionResult DeleteAppointment(int id)
         {   
             return Ok(_appointmentService.DeleteAppointment(id));
+        }
+        [HttpGet("/AppointmentsByIdDoctor/{id}")]
+        public IActionResult GetAppointmentsByDoctors(int id)
+        {
+            return Ok(_appointmentService.GetAppointmentsDoctorById(id));
+        }
+
+        [HttpGet("/AppointmentsByIdPatient/{id}")]
+        public IActionResult GetAppointmentsByPatients(int id)
+        {
+            return Ok(_appointmentService.GetAppointmentsPatientById(id));
+        }
+        [HttpPost ("/AppointmentUpdateStatus/{id}")]
+        public IActionResult CanceledAppointment(int id)
+        {
+            return Ok(_appointmentService.CanceledAppointment(id));
         }
     }
 }

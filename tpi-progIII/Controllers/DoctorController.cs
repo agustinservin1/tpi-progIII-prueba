@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.Model.Request;
 using Application.Services;
+using Domain.Enums;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -45,6 +46,10 @@ namespace tpi_progIII.Controllers
         public IActionResult DeleteDoctor(int id)
         {
             return Ok(_service.DeleteDoctor(id));
+        }
+        [HttpGet ("/GetDoctorsBySpecialty/")]
+        public IActionResult GetDoctorsBySpecialty([FromQuery]Specialty specialty) {
+            return Ok(_service.GetBySpecialty(specialty));    
         }
 
     }

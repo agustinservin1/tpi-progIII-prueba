@@ -17,7 +17,7 @@ namespace Infrastructure.Data
         }
         public DbSet<Doctor>Doctors { get; set; }
         public DbSet<Patient>Patients { get; set; }
-        public DbSet<Appointment>Appoitments { get; set; }
+        public DbSet<Appointment>Appointments { get; set; }
         public DbSet<Address> Adress { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -46,10 +46,12 @@ namespace Infrastructure.Data
                 .Property(e => e.Status)
                 .HasConversion(appointmetStatusConverter);
 
-            var doctorSpeciality = new EnumToStringConverter<Specialty>();
             modelBuilder.Entity<Doctor>()
-                .Property(e => e.Specialty)
-                .HasConversion(doctorSpeciality);
+                .Property(b => b.Specialty)
+                .HasConversion(
+                    c => c.ToString(),
+                    c => Enum.Parse<Specialty>(c)
+                );
 
             modelBuilder.Entity<Doctor>()
                 .HasMany(d => d.AssignedAppointment)

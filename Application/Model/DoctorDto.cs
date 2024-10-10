@@ -23,7 +23,10 @@ namespace Application.Model
         public string Password { get; set; } = string.Empty;
         public AddressDto Address { get; set; }
         [Required]
+        [EnumDataType(typeof(Specialty))]
         public Specialty Specialty { get; set; }
+        public UserRole UserRole { get; set; }
+
         public int LicenseNumber { get; set; }
 
         public static DoctorDto CreateDoctorDto (Doctor doctor)
@@ -37,9 +40,10 @@ namespace Application.Model
                 DateOfBirth = doctor.DateOfBirth,
                 Specialty = doctor.Specialty,
                 LicenseNumber = doctor.LicenseNumber,
-                Address = AddressDto.CreateAddressDto(doctor.Address),
                 Email = doctor.Email,
                 Password = doctor.Password,
+                UserRole = doctor.UserRole,
+                Address = AddressDto.CreateAddressDto(doctor.Address),
 
             };
             return doctorDto;

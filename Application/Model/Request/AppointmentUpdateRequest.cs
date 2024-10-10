@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Application.Model.Request
 {
-    public class AppointmentDetailRequest
+    public class AppointmentUpdateRequest
     {
-        public int Id { get; set; }
         public int PatientId { get; set; }
         public int DoctorId { get; set; }
         public DateTime AppointmentDate { get; set; }

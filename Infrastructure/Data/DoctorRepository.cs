@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Domain.Enums;
 using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -39,6 +40,14 @@ namespace Infrastructure.Data
             var doctors = _context.Doctors.Remove(entity);   
             _context.SaveChanges();
             return entity;  
+        }
+        public IEnumerable<Doctor> GetDoctorsBySpecialty(Specialty specialty) {
+            var doctors = _context.Doctors
+                              .Include(a=>a.Address)    
+                              .Where(a=>a.Specialty == specialty)  
+                              .ToList();
+            return doctors;
+                             
         }
     }
 }

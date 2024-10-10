@@ -1,5 +1,6 @@
 ﻿using Application.Model;
 using Application.Model.Request;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,6 @@ namespace Application.Interfaces
         DoctorDto CreateDoctor(DoctorCreateRequest doctor);
         DoctorDto UpdateDoctor(int id, UpdateDoctorRequest doctor);
         DoctorDto DeleteDoctor(int id);
+        IEnumerable<DoctorDto> GetBySpecialty(Specialty specialty);
     }
 }

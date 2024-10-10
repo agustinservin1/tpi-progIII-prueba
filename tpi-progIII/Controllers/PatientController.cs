@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.Model.Request;
 using Application.Services;
+using Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,9 +12,10 @@ namespace tpi_progIII.Controllers
     public class PatientController : ControllerBase
     {
         private readonly IPatientService _service;
-
-        public PatientController(IPatientService service)
+        private readonly IUserRepository _userRepository;
+        public PatientController(IPatientService service, IUserRepository userRepository)
         {
+            _userRepository = userRepository;
             _service = service;
         }
 
@@ -47,6 +49,8 @@ namespace tpi_progIII.Controllers
         {
             return Ok(_service.DeletePatient(id));
         }
+        
+       
     }
 }
 

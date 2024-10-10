@@ -18,6 +18,7 @@ namespace Domain.Entities
         public Doctor()
         {
             IsAvailable = true;
+            UserRole = UserRole.Doctor;
         }
 
     }

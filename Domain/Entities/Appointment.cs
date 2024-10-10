@@ -14,16 +14,22 @@ namespace Domain.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-       
+             
         public DateTime Date { get; set; }
         public TimeSpan Time { get; set; }
         public string Office { get; set; } = string.Empty;
         public AppointmentStatus Status { get; set; }
 
         //Relación con pacientes y doctores
+        public int DoctorId { get; set; }
+        public int PatientId { get; set; }
         public Doctor? Doctor { get; set; }
         public Patient? Patient { get; set; }
 
+        public Appointment()
+        {
+            Status = AppointmentStatus.Pending;
+        }
 
     }
 }

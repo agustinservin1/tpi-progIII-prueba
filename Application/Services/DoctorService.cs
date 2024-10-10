@@ -2,6 +2,7 @@
 using Application.Model;
 using Application.Model.Request;
 using Domain.Entities;
+using Domain.Enums;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -78,6 +79,11 @@ namespace Application.Services
                 var entity = _repository.DeleteDoctor(id);
                 return DoctorDto.CreateDoctorDto(entity);
 
+        }
+        public IEnumerable<DoctorDto> GetBySpecialty(Specialty specialty)
+        {
+           var doctors = _repository.GetDoctorsBySpecialty(specialty);
+           return DoctorDto.CreatelistDto(doctors);
         }
 
         }
