@@ -3,6 +3,7 @@ using Application.Model.Request;
 using Application.Services;
 using Domain.Enums;
 using Domain.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +11,7 @@ namespace tpi_progIII.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class DoctorController : ControllerBase
     {
      private readonly IDoctorService _service;

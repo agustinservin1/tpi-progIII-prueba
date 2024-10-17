@@ -48,7 +48,7 @@ namespace tpi_progIII.Controllers
         {
             return Ok(_appointmentService.GetAppointmentsPatientById(id));
         }
-        [HttpPost ("/AppointmentUpdateStatus/{id}")]
+        [HttpPost ("/CanceledAppointmentStatus/{id}")]
         public IActionResult CanceledAppointment(int id)
         {
             return Ok(_appointmentService.CanceledAppointment(id));

@@ -19,7 +19,7 @@ namespace tpi_progIII.Controllers
         [HttpPost]
         public IActionResult AuthenticateUser([FromBody] CredentialRequest request)
         {
-           return Ok("jwt");
+            return Ok(_authenticateService.AuthenticateCredentials(request));
         }
     }
 }
