@@ -16,6 +16,5 @@ namespace Application.Model.Request
         public Specialty Specialty { get; set; }
         public int LicenseNumber { get; set; }
 
-        public AddressForRequest? Address { get; set; }
     }
 }

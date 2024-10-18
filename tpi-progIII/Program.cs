@@ -1,5 +1,6 @@
 using Application.Interfaces;
 using Application.Services;
+using Domain.Enums;
 using Domain.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Services;
@@ -37,7 +38,7 @@ builder.Services.AddSwaggerGen(setupAction =>
                 }, new List<string>() }
     });
 });
-////////////////////////////////////////////////////////////
+
 builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntenticación que tenemos que elegir después en PostMan para pasarle el token
     .AddJwtBearer(options => //Acá definimos la configuración de la autenticación. le decimos qué cosas queremos comprobar. La fecha de expiración se valida por defecto.
     {
@@ -52,6 +53,17 @@ builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntentica
         };
     }
 );
+
+//AUTENTICACIÓN POR ROL
+// configuraci?n de autorizaci?n basada en roles
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Patient", policy => policy.RequireRole(UserRole.Patient.ToString(), UserRole.Admin.ToString()));
+    options.AddPolicy("Doctor", policy => policy.RequireRole(UserRole.Doctor.ToString(), UserRole.Admin.ToString()));
+    options.AddPolicy("Admin", policy => policy.RequireRole(UserRole.Admin.ToString()));
+
+
+});
 //////////////////////////////////////////////////////////////
 
 //Servicios
@@ -83,6 +95,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();//Ver si maneja correctamente errores 403
 app.UseAuthorization();
 
 app.MapControllers();

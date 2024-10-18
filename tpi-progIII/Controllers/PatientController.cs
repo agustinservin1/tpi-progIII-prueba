@@ -33,18 +33,21 @@ namespace tpi_progIII.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "Patient")]
         public IActionResult AddPatient([FromBody] PatientCreateRequest request)
         {
             return Ok(_service.CreatePatient(request));
         }
 
         [HttpPut("/UpdatePatient/{id}")]
+        [Authorize(Policy = "Doctor")]
         public IActionResult UpdatePatient(int id, [FromBody] UpdatePatientRequest request)
         {
             return Ok(_service.UpdatePatient(id, request));
         }
 
         [HttpDelete("/DeletePatient/{id}")]
+        [Authorize(Policy = "Admin")]
 
         public IActionResult DeletePatient(int id)
         {

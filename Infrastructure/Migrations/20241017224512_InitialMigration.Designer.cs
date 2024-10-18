@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20241008160220_InitialMigration")]
+    [Migration("20241017224512_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -30,6 +30,9 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("PatientId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("PostalCode")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -44,6 +47,9 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PatientId")
+                        .IsUnique();
+
                     b.ToTable("Adress");
                 });
 
@@ -56,14 +62,14 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("DoctorId")
+                    b.Property<int>("DoctorId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Office")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("PatientId")
+                    b.Property<int>("PatientId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Status")
@@ -79,16 +85,13 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Appoitments");
+                    b.ToTable("Appointments");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("AddressId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DateOfBirth")
@@ -124,9 +127,6 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId")
-                        .IsUnique();
-
                     b.ToTable("Usuarios", (string)null);
 
                     b.HasDiscriminator<string>("UserRole");
@@ -151,7 +151,7 @@ namespace Infrastructure.Migrations
                     b.Property<int>("LicenseNumber")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Speciality")
+                    b.Property<string>("Specialty")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -181,35 +181,34 @@ namespace Infrastructure.Migrations
                     b.HasDiscriminator().HasValue("Patient");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Appointment", b =>
+            modelBuilder.Entity("Domain.Entities.Address", b =>
                 {
-                    b.HasOne("Domain.Entities.Doctor", "Doctor")
-                        .WithMany("AssignedAppointment")
-                        .HasForeignKey("DoctorId");
-
                     b.HasOne("Domain.Entities.Patient", "Patient")
-                        .WithMany("Appoitments")
-                        .HasForeignKey("PatientId");
-
-                    b.Navigation("Doctor");
+                        .WithOne("Address")
+                        .HasForeignKey("Domain.Entities.Address", "PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Patient");
                 });
 
-            modelBuilder.Entity("Domain.Entities.User", b =>
+            modelBuilder.Entity("Domain.Entities.Appointment", b =>
                 {
-                    b.HasOne("Domain.Entities.Address", "Address")
-                        .WithOne("User")
-                        .HasForeignKey("Domain.Entities.User", "AddressId")
+                    b.HasOne("Domain.Entities.Doctor", "Doctor")
+                        .WithMany("AssignedAppointment")
+                        .HasForeignKey("DoctorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Address");
-                });
+                    b.HasOne("Domain.Entities.Patient", "Patient")
+                        .WithMany("Appoitments")
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-            modelBuilder.Entity("Domain.Entities.Address", b =>
-                {
-                    b.Navigation("User");
+                    b.Navigation("Doctor");
+
+                    b.Navigation("Patient");
                 });
 
             modelBuilder.Entity("Domain.Entities.Doctor", b =>
@@ -219,6 +218,9 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Patient", b =>
                 {
+                    b.Navigation("Address")
+                        .IsRequired();
+
                     b.Navigation("Appoitments");
                 });
 #pragma warning restore 612, 618

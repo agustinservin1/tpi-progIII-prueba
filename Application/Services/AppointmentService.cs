@@ -35,7 +35,6 @@ namespace Application.Services
             {
                 DoctorId = appointment.DoctorId,
                 PatientId = appointment.PatientId,
-                //Time = appointment.Time,
                 Date = appointment.AppointmentDate,
                 Office = appointment.Office
             };

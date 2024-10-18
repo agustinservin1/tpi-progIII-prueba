@@ -27,7 +27,6 @@ namespace Application.Model
             {
                 Id = appointment.Id,
                 Date = appointment.Date,
-                //Time = appointment.Time,
                 Office = appointment.Office,
                 DoctorId = appointment.DoctorId,
                 PatientId = appointment.PatientId,

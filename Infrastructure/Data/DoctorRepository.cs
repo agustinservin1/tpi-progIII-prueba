@@ -18,24 +18,21 @@ namespace Infrastructure.Data
         {
             _context = context;
         }
-        public Doctor? GetByIdIncludeAddress(int id)
+        public Doctor? GetById(int id)
         {
             var entity = _context.Doctors
-                                 .Include(a=>a.Address)
                                  .FirstOrDefault(d => d.Id == id);
             return entity;
         }
-        public IEnumerable<Doctor> GetAllDoctorsWithAddress()
+        public IEnumerable<Doctor> GetAllDoctors()
         {
             var list = _context.Doctors
-                    .Include(a=>a.Address)  
                     .ToList();
             return list;
         }
         public Doctor DeleteDoctor (int id)
         {
             var entity = _context.Doctors
-                        .Include (a=>a.Address)
                         .FirstOrDefault(d => d.Id == id);
             var doctors = _context.Doctors.Remove(entity);   
             _context.SaveChanges();
@@ -43,7 +40,6 @@ namespace Infrastructure.Data
         }
         public IEnumerable<Doctor> GetDoctorsBySpecialty(Specialty specialty) {
             var doctors = _context.Doctors
-                              .Include(a=>a.Address)    
                               .Where(a=>a.Specialty == specialty)  
                               .ToList();
             return doctors;

@@ -43,7 +43,6 @@ namespace Application.Model
                 Email = doctor.Email,
                 Password = doctor.Password,
                 UserRole = doctor.UserRole,
-                Address = AddressDto.CreateAddressDto(doctor.Address),
 
             };
             return doctorDto;

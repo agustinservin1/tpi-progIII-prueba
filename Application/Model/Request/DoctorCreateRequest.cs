@@ -17,7 +17,6 @@ namespace Application.Model.Request
         public string Email { get; set; } = string.Empty;
         
         public string Password { get; set; } = string.Empty;
-        public AddressForRequest Address { get; set; } = new AddressForRequest();
         
         [Required]
         [EnumDataType(typeof(Specialty))]

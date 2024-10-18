@@ -17,7 +17,7 @@ namespace Application.Model
         public string PhoneNumber { get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }
         public string Email { get; set; } = string.Empty;
-        [Required]
+        [Required]  
         public string Password { get; set; } = string.Empty;
         [Required]
         public UserRole UserRole { get; set; }

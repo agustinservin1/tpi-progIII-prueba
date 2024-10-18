@@ -11,6 +11,6 @@ namespace Domain.Interfaces
     public interface IUserRepository:IBaseRepository<User>
     {
         User? GetUserByEmail(string email);
-        
+        User? Authenticate(string email, string password);
     }
 }

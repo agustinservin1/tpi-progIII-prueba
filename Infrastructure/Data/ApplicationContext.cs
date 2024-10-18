@@ -58,13 +58,16 @@ namespace Infrastructure.Data
                 .WithOne(t => t.Doctor);
 
             modelBuilder.Entity<Patient>()
-                .HasMany(d => d.Appoitments)
-                .WithOne(t => t.Patient);
+                .HasMany(p => p.Appoitments)
+                .WithOne(a => a.Patient)
+                .HasForeignKey(a => a.PatientId);
 
-            modelBuilder.Entity<Address>()
-                .HasOne(d => d.User)
-                .WithOne(a => a.Address)
-                .HasForeignKey<User>(a => a.AddressId);
+            modelBuilder.Entity<Patient>()
+                .HasOne(u => u.Address)
+                .WithOne(a => a.Patient)
+                .HasForeignKey<Address>(a => a.PatientId);
+
+
 
 
         }

@@ -23,23 +23,17 @@ namespace Application.Services
         }
         public DoctorDto GetById (int id) {
 
-            var doctor = _repository.GetByIdIncludeAddress (id);
+            var doctor = _repository.GetById(id);
             return DoctorDto.CreateDoctorDto(doctor);
         }
         public IEnumerable<DoctorDto> GetAllDoctors()
         {
-            var list = _repository.GetAllDoctorsWithAddress();
+            var list = _repository.GetAllDoctors();
             return DoctorDto.CreatelistDto(list);
         }
         public DoctorDto CreateDoctor(DoctorCreateRequest doctor)
         {
-            var newAdress = new Address()
-            {
-                Street = doctor.Address.Street,
-                PostalCode = doctor.Address.PostalCode,
-                City = doctor.Address.City,
-                Province = doctor.Address.Province,
-            };
+      
 
             var entity = new Doctor()
             {
@@ -49,12 +43,10 @@ namespace Application.Services
                 DateOfBirth = doctor.DateOfBirth,
                 Specialty = doctor.Specialty,
                 LicenseNumber = doctor.LicenseNumber,
-                Address = newAdress,
                 Email = doctor.Email,
                 Password = doctor.Password,
             };
             
-                var address = _addressRepository.Create(newAdress);
                 var newEntity = _repository.Create(entity);
                 return DoctorDto.CreateDoctorDto (newEntity);
              }  

@@ -10,7 +10,7 @@ namespace Application.Interfaces
 {
     public interface IAuthenticationService
     {
-        //User? ValidationUser(CredentialRequest authenticationRequest)
-        //UserAuthenticateModel? AuthenticateCredentials(CredentialRequest credentialRequest);
+        User? ValidateUser(CredentialRequest authenticationRequest);
+        public string AuthenticateCredentials(CredentialRequest credentialRequest);
     }
 }

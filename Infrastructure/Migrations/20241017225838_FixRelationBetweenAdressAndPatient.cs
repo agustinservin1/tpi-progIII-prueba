@@ -5,24 +5,18 @@
 namespace Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class FixEntitieAddress : Migration
+    public partial class FixRelationBetweenAdressAndPatient : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "Speciality",
-                table: "Usuarios",
-                newName: "Specialty");
+
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "Specialty",
-                table: "Usuarios",
-                newName: "Speciality");
+
         }
     }
 }

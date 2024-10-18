@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20241009000513_CorrecionPatientIdEnAppointment")]
-    partial class CorrecionPatientIdEnAppointment
+    [Migration("20241017225838_FixRelationBetweenAdressAndPatient")]
+    partial class FixRelationBetweenAdressAndPatient
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -30,6 +30,9 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("PatientId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("PostalCode")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -43,6 +46,9 @@ namespace Infrastructure.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PatientId")
+                        .IsUnique();
 
                     b.ToTable("Adress");
                 });
@@ -79,16 +85,13 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("PatientId");
 
-                    b.ToTable("Appoitments");
+                    b.ToTable("Appointments");
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("AddressId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("DateOfBirth")
@@ -124,9 +127,6 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId")
-                        .IsUnique();
-
                     b.ToTable("Usuarios", (string)null);
 
                     b.HasDiscriminator<string>("UserRole");
@@ -155,11 +155,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.ToTable("Usuarios", null, t =>
-                        {
-                            t.Property("IsAvailable")
-                                .HasColumnName("Doctor_IsAvailable");
-                        });
+                    b.ToTable("Usuarios", (string)null);
 
                     b.HasDiscriminator().HasValue("Doctor");
                 });
@@ -167,9 +163,6 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.Patient", b =>
                 {
                     b.HasBaseType("Domain.Entities.User");
-
-                    b.Property<bool>("IsAvailable")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("MedicalInsurance")
                         .IsRequired()
@@ -179,6 +172,17 @@ namespace Infrastructure.Migrations
                     b.ToTable("Usuarios", (string)null);
 
                     b.HasDiscriminator().HasValue("Patient");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Address", b =>
+                {
+                    b.HasOne("Domain.Entities.Patient", "Patient")
+                        .WithOne("Address")
+                        .HasForeignKey("Domain.Entities.Address", "PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Patient");
                 });
 
             modelBuilder.Entity("Domain.Entities.Appointment", b =>
@@ -200,22 +204,6 @@ namespace Infrastructure.Migrations
                     b.Navigation("Patient");
                 });
 
-            modelBuilder.Entity("Domain.Entities.User", b =>
-                {
-                    b.HasOne("Domain.Entities.Address", "Address")
-                        .WithOne("User")
-                        .HasForeignKey("Domain.Entities.User", "AddressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Address");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Address", b =>
-                {
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Domain.Entities.Doctor", b =>
                 {
                     b.Navigation("AssignedAppointment");
@@ -223,6 +211,9 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Patient", b =>
                 {
+                    b.Navigation("Address")
+                        .IsRequired();
+
                     b.Navigation("Appoitments");
                 });
 #pragma warning restore 612, 618

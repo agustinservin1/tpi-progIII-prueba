@@ -10,8 +10,8 @@ namespace Domain.Interfaces
 {
     public interface IDoctorRepository : IBaseRepository<Doctor>
     {
-        Doctor? GetByIdIncludeAddress(int id);
-        IEnumerable<Doctor> GetAllDoctorsWithAddress();
+        Doctor? GetById(int id);
+        IEnumerable<Doctor> GetAllDoctors();
         Doctor DeleteDoctor (int id);
         IEnumerable<Doctor> GetDoctorsBySpecialty(Specialty specialty);
 

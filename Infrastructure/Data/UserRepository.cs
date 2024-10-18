@@ -21,6 +21,11 @@ namespace Infrastructure.Data
             {
                 return _context.Set<User>().SingleOrDefault(u => u.Email == email);
             }
-           
+            public User? Authenticate(string email, string password)
+            {
+                User? userToAuthenticate= _context.Set<User>().FirstOrDefault(u => u.Email == email && u.Password == password);
+                return userToAuthenticate;
+               
+            }
     }
 }

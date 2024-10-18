@@ -12,12 +12,11 @@ namespace Domain.Entities
     {
         [MaxLength(50)]
         public string MedicalInsurance { get; set; } = string.Empty;
-        public bool IsAvailable { get; set; }
         public ICollection<Appointment> Appoitments { get; set; } = new List<Appointment>();
+        public Address Address { get; set; }    
         public Patient()
         {
             UserRole = UserRole.Patient;
-            IsAvailable = true;
 
         }
     }

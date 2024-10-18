@@ -18,9 +18,9 @@ namespace Domain.Entities
         public string City { get; set; } = string.Empty;
         public string PostalCode { get; set; } = string.Empty;
 
-        //Relación con USER
-        public User? User { get; set; }
-
+        //Relación con Patient
+        public Patient? Patient { get; set; }
+        public int PatientId { get; set; }
 
     }
 }

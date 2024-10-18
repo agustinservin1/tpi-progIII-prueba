@@ -57,7 +57,6 @@ namespace Application.Services
             };
 
            
-                var address = _addresRepository.Create(newAdress);
                 var newEntity = _patientRepository.Create(entity);
                 return PatientDto.CreatePatient(newEntity);
             }

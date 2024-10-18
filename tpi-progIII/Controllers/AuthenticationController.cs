@@ -16,10 +16,17 @@ namespace tpi_progIII.Controllers
             _authenticateService = authenticateService;
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
         public IActionResult AuthenticateUser([FromBody] CredentialRequest request)
         {
-            return Ok(_authenticateService.AuthenticateCredentials(request));
+            string token = _authenticateService.AuthenticateCredentials(request);
+            
+            if (token is not null)
+                { 
+                    return  (Ok(token));
+                }
+            
+            return Unauthorized();
         }
     }
 }
